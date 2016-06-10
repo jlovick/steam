@@ -40,7 +40,7 @@ module Locomotive
         if source.is_a?(Hash)
           source['url'].strip
         elsif source.respond_to?(:url)
-          if source.url.method_defined :strip
+          if source.url.respond_to? :strip
              source.url.strip
           else
              nil
