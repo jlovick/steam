@@ -43,7 +43,7 @@ module Locomotive
           if source.url.respond_to? :strip
              source.url.strip
           else
-             nil
+             source.url
           end
         else
           source
